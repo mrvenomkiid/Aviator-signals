@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sunbet - Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+    * { font-family: 'Inter', sans-serif; }
+  .logo-script { font-family: 'Great Vibes', cursive; }
+  body {
+    background: #00102e;
+  }
+  .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 20%;
+  }
+  .glass-card {
+    background: rgba(211, 213, 216, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  }
+  .input-pill {
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .input-pill::placeholder {
+    color: #9a9a9a;
+    font-size: 13px;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOP NAVBAR -->
+  <header class="w-full bg-[#001033] h-[58px] flex items-center justify-between px-3 sm:px-5 relative z-20 border-b border-white/5">
+    <div class="flex items-center gap-3 sm:gap-5">
+      <!-- Logo -->
+      <a href="#" class="logo-script text-white text-[32px] leading-none tracking-wide -rotate-2 mt-1">Sunbet</a>
+      
+      <!-- Promo Text -->
+      <div class="text-white text-[13px] sm:text-[15px] leading-[1.15] font-medium">
+        <a href="#" class="underline decoration-white underline-offset-2">Sign Up</a> and get a <span class="text-[#F5B81D] font-bold">100% FIRST DEPOSIT MATCH</span> up to <br class="hidden sm:block"> R1000
+      </div>
+    </div>
+
+    <!-- Top LOGIN Button -->
+    <button class="border-[1.5px] border-[#C9A86A] text-white text-[13px] sm:text-[14px] font-bold tracking-wide px-5 sm:px-6 py-[6px] rounded-full hover:bg-white hover:text-[#001033] transition-all duration-200">
+      LOGIN
+    </button>
+  </header>
+
+  <!-- MAIN HERO + MODAL -->
+  <main class="relative flex-1 flex flex-col items-center">
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 hero-bg"></div>
+    <!-- Yellow/Blue overlay to match original -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0a1e4d]/60 via-transparent to-[#001033]/90"></div>
+    <!-- Yellow tint like horse image -->
+    <div class="absolute inset-0 bg-[#FFC700]/10 mix-blend-overlay"></div>
+
+    <!-- Close X -->
+    <button class="absolute top-[10px] right-[16px] z-30 w-[22px] h-[22px] rounded-full border border-white/80 text-white flex items-center justify-center text-[16px] leading-none font-light hover:bg-white hover:text-black transition">
+      &times;
+    </button>
+
+    <!-- LOGIN CARD -->
+    <div class="relative z-10 w-[94%] max-w-[548px] mt-[10px] sm:mt-[14px] mx-auto">
+      <div class="glass-card rounded-[16px] px-[16px] sm:px-[24px] pt-[18px] pb-[22px]">
+
+        <h1 class="text-center text-[#0B1E3A] font-extrabold text-[16px] sm:text-[18px] tracking-[0.2px] uppercase mb-[18px]">
+          LOGIN TO YOUR SUNBET ACCOUNT
+        </h1>
+
+        <form class="flex flex-col gap-[14px]" onsubmit="return false;">
+          <!-- Username -->
+          <input type="text" placeholder="Enter your username" 
+            class="input-pill w-full h-[46px] rounded-full bg-white px-[20px] text-[14px] text-gray-800 outline-none border border-transparent focus:border-[#FFC72C] focus:ring-2 focus:ring-[#FFC72C]/40 transition" />
+
+          <!-- Password -->
+          <input type="password" placeholder="Enter your password" 
+            class="input-pill w-full h-[46px] rounded-full bg-white px-[20px] text-[14px] text-gray-800 outline-none border border-transparent focus:border-[#FFC72C] focus:ring-2 focus:ring-[#FFC72C]/40 transition" />
+
+          <!-- Login Button -->
+          <div class="flex justify-center mt-[4px]">
+            <button class="bg-[#FFC72C] hover:bg-[#FFD84D] active:scale-[0.98] text-[#1A1A1A] font-extrabold text-[15px] tracking-wide w-[190px] h-[46px] rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all">
+              LOGIN
+            </button>
+          </div>
+
+          <!-- Links -->
+          <div class="text-center text-[10px] sm:text-[11px] text-[#2B2B2B] mt-[6px] font-medium">
+            <a href="#" class="underline hover:text-black">Sign Up</a> | 
+            <a href="#" class="underline hover:text-black">Forgot Username?</a> | 
+            <a href="#" class="underline hover:text-black">Forgot Password?</a> | 
+            <a href="#" class="underline hover:text-black">Reset Password</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom jockey silhouette hint -->
+    <div class="flex-1"></div>
+    <div class="relative z-0 w-full h-[140px] sm:h-[180px] overflow-hidden pointer-events-none">
+      <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover object-top opacity-40 blur-[1px] scale-125" alt="" />
+    </div>
+  </main>
+
+<script>
+  // Demo only - no backend
+  document.querySelector('form').addEventListener('submit', e => e.preventDefault());
+</script>
+</body>
+</html>
